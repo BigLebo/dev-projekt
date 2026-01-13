@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTR Nové Dvory – Projektový portál</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Mobile header -->
+    <header class="mobile-header">
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <h1>BTR Nové Dvory</h1>
+    </header>
+
+    <!-- Sidebar navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">🏗️</span>
+                <div class="logo-text">
+                    <strong>BTR Nové Dvory</strong>
+                    <small>Projektový portál</small>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="#dashboard" class="nav-link active" data-page="dashboard">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#harmonogram" class="nav-link" data-page="harmonogram">
+                        <span class="nav-icon">📅</span>
+                        <span class="nav-text">Harmonogram</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#role" class="nav-link" data-page="role">
+                        <span class="nav-icon">👥</span>
+                        <span class="nav-text">Role a struktura</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#rizika" class="nav-link" data-page="rizika">
+                        <span class="nav-icon">⚠️</span>
+                        <span class="nav-text">Matice rizik</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="project-info">
+                <small>Projekt: BTR Premium</small>
+                <small>Lokalita: Praha – Krč</small>
+                <small>Termín: 2026–2029</small>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Overlay for mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <!-- Dashboard page -->
+        <section class="page active" id="page-dashboard">
+            <div class="page-header">
+                <h2>Dashboard</h2>
+                <p class="page-subtitle">Přehled projektu BTR Nové Dvory</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">📅</div>
+                    <div class="stat-content">
+                        <span class="stat-value">43</span>
+                        <span class="stat-label">měsíců celkem</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">✓</div>
+                    <div class="stat-content">
+                        <span class="stat-value">29</span>
+                        <span class="stat-label">aktivit na krit. cestě</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange">⚠️</div>
+                    <div class="stat-content">
+                        <span class="stat-value">8</span>
+                        <span class="stat-label">identifikovaných rizik</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon purple">👥</div>
+                    <div class="stat-content">
+                        <span class="stat-value">7</span>
+                        <span class="stat-label">klíčových rolí</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-cards">
+                <div class="info-card">
+                    <h3>📍 O projektu</h3>
+                    <ul>
+                        <li><strong>Typ:</strong> BTR bytový dům (Build-to-Rent)</li>
+                        <li><strong>Segment:</strong> Premium dlouhodobý pronájem</li>
+                        <li><strong>Parcely:</strong> 2869/219, 2869/271, 2869/281</li>
+                        <li><strong>Katastr:</strong> Krč, Praha</li>
+                        <li><strong>Lokalita:</strong> Nové Dvory</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>🗓️ Klíčové milníky</h3>
+                    <div class="milestone-list">
+                        <div class="milestone">
+                            <span class="milestone-date">07/2026</span>
+                            <span class="milestone-text">DPZ dokumentace</span>
+                        </div>
+                        <div class="milestone">
+                            <span class="milestone-date">10/2026</span>
+                            <span class="milestone-text">Povolení záměru</span>
+                        </div>
+                        <div class="milestone">
+                            <span class="milestone-date">05/2027</span>
+                            <span class="milestone-text">Zahájení stavby</span>
+                        </div>
+                        <div class="milestone">
+                            <span class="milestone-date">01/2029</span>
+                            <span class="milestone-text">Kolaudace</span>
+                        </div>
+                        <div class="milestone">
+                            <span class="milestone-date">08/2029</span>
+                            <span class="milestone-text">95% obsazenost</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card wide">
+                    <h3>⚡ Fáze projektu</h3>
+                    <div class="phases-timeline">
+                        <div class="phase-item" style="--phase-color: #c5e0b4;">
+                            <span class="phase-name">0: Příprava</span>
+                            <span class="phase-date">01–02/2026</span>
+                        </div>
+                        <div class="phase-item" style="--phase-color: #bdd7ee;">
+                            <span class="phase-name">1: Projektová příprava</span>
+                            <span class="phase-date">01/2026–02/2027</span>
+                        </div>
+                        <div class="phase-item" style="--phase-color: #ffe699;">
+                            <span class="phase-name">2: Výběr dodavatele</span>
+                            <span class="phase-date">02–04/2027</span>
+                        </div>
+                        <div class="phase-item" style="--phase-color: #f8cbad;">
+                            <span class="phase-name">3: Realizace</span>
+                            <span class="phase-date">05/2027–01/2029</span>
+                        </div>
+                        <div class="phase-item" style="--phase-color: #d9d2e9;">
+                            <span class="phase-name">4: Provoz</span>
+                            <span class="phase-date">01–08/2029</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Harmonogram page -->
+        <section class="page" id="page-harmonogram">
+            <div class="page-header">
+                <h2>Harmonogram projektu</h2>
+                <p class="page-subtitle">Ganttův diagram s kritickou cestou</p>
+            </div>
+
+            <div class="gantt-controls">
+                <label>
+                    <span>Fáze:</span>
+                    <select id="phaseFilter">
+                        <option value="all">Všechny fáze</option>
+                        <option value="0">0: Příprava</option>
+                        <option value="0A">0A: Financování I</option>
+                        <option value="1">1: Projektová příprava</option>
+                        <option value="1A">1A: Financování II</option>
+                        <option value="2">2: Výběr dodavatele</option>
+                        <option value="3">3: Realizace</option>
+                        <option value="4">4: Provoz</option>
+                    </select>
+                </label>
+                <label>
+                    <span>Role:</span>
+                    <select id="roleFilter">
+                        <option value="all">Všechny role</option>
+                        <option value="INV">INV - Investor</option>
+                        <option value="PM">PM - Projektový manažer</option>
+                        <option value="ARCH">ARCH - Architekt</option>
+                        <option value="PROJ">PROJ - Projektant</option>
+                        <option value="EKO">EKO - Ekonom</option>
+                        <option value="ING">ING - Inženýring</option>
+                        <option value="LEG">LEG - Legal</option>
+                        <option value="GD">GD - Generální dodavatel</option>
+                        <option value="TDI">TDI - Technický dozor</option>
+                        <option value="MKT">MKT - Marketing</option>
+                        <option value="FM">FM - Facility manager</option>
+                    </select>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="criticalOnly">
+                    <span>Pouze kritická cesta</span>
+                </label>
+            </div>
+
+            <div class="gantt-legend">
+                <div class="legend-item"><div class="legend-color phase-0"></div><span>0: Příprava</span></div>
+                <div class="legend-item"><div class="legend-color phase-0A"></div><span>0A</span></div>
+                <div class="legend-item"><div class="legend-color phase-1"></div><span>1: Projekt</span></div>
+                <div class="legend-item"><div class="legend-color phase-1A"></div><span>1A</span></div>
+                <div class="legend-item"><div class="legend-color phase-2"></div><span>2: Výběr</span></div>
+                <div class="legend-item"><div class="legend-color phase-3"></div><span>3: Realizace</span></div>
+                <div class="legend-item"><div class="legend-color phase-4"></div><span>4: Provoz</span></div>
+                <div class="legend-item"><div class="legend-color risk"></div><span>Riziko</span></div>
+            </div>
+
+            <!-- Mobile view toggle -->
+            <div class="view-toggle">
+                <button id="btnList" class="active">📋 Seznam</button>
+                <button id="btnGantt">📊 Gantt</button>
+            </div>
+
+            <!-- Desktop Gantt -->
+            <div class="gantt-wrapper" id="ganttWrapper">
+                <div class="gantt-container">
+                    <div class="gantt-header">
+                        <div class="gantt-col-code">Kód</div>
+                        <div class="gantt-col-name">Aktivita</div>
+                        <div class="gantt-col-resp">Role</div>
+                        <div class="gantt-timeline">
+                            <div class="year-marker">2026</div>
+                            <div class="year-marker">2027</div>
+                            <div class="year-marker">2028</div>
+                            <div class="year-marker">2029</div>
+                        </div>
+                    </div>
+                    <div class="gantt-quarters">
+                        <div class="gantt-col-code">#</div>
+                        <div class="gantt-col-name">Název</div>
+                        <div class="gantt-col-resp">Odpov.</div>
+                        <div class="gantt-timeline" id="quarterMarkers"></div>
+                    </div>
+                    <div class="gantt-body" id="ganttBody"></div>
+                </div>
+            </div>
+
+            <!-- Mobile list -->
+            <div class="mobile-list" id="mobileList"></div>
+
+            <div class="gantt-summary">
+                <div class="summary-card blue">
+                    <h4>📊 Kritická cesta</h4>
+                    <p>29 aktivit, 189 týdnů</p>
+                </div>
+                <div class="summary-card red">
+                    <h4>⚠️ Nejvyšší riziko</h4>
+                    <p>3.5 Hrubá stavba (22 týdnů)</p>
+                </div>
+                <div class="summary-card green">
+                    <h4>✓ Termín</h4>
+                    <p>1.1.2026 → 17.8.2029</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Role page -->
+        <section class="page" id="page-role">
+            <div class="page-header">
+                <h2>Role a struktura projektu</h2>
+                <p class="page-subtitle">Řídící struktura a odpovědnosti</p>
+            </div>
+
+            <div class="roles-grid">
+                <div class="role-card">
+                    <div class="role-header inv">
+                        <span class="role-icon">💼</span>
+                        <div>
+                            <h3>Investor / Developer</h3>
+                            <span class="role-code">INV</span>
+                        </div>
+                    </div>
+                    <div class="role-body">
+                        <div class="role-section">
+                            <h4>Odpovědnost</h4>
+                            <p>Schvalování rozpočtu, klíčová rozhodnutí. Odpovědnost za projekt jako celek.</p>
+                        </div>
+                        <div class="role-section">
+                            <h4>Výstupy</h4>
+                            <p>Business plán, investiční rozhodnutí</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-header pm">
+                        <span class="role-icon">📋</span>
+                        <div>
+                            <h3>Projektový manažer</h3>
+                            <span class="role-code">PM</span>
+                        </div>
+                    </div>
+                    <div class="role-body">
+                        <div class="role-section">
+                            <h4>Odpovědnost</h4>
+                            <p>Koordinace práce, harmonogram, reporting.</p>
+                        </div>
+                        <div class="role-section">
+                            <h4>Výstupy</h4>
+                            <p>Harmonogram, reporting, registr rizik</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-header arch">
+                        <span class="role-icon">🏛️</span>
+                        <div>
+                            <h3>Architekt / Urbanista</h3>
+                            <span class="role-code">ARCH</span>
+                        </div>
+                    </div>
+                    <div class="role-body">
+                        <div class="role-section">
+                            <h4>Odpovědnost</h4>
+                            <p>Návrh řešení, prostorový a společenský koncept.</p>
+                        </div>
+                        <div class="role-section">
+                            <h4>Výstupy</h4>
+                            <p>Architektonická studie, projektová dokumentace pro stavební povolení</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-header eko">
+                        <span class="role-icon">💰</span>
+                        <div>
+                            <h3>Ekonom / Cost Manager</h3>
+                            <span class="role-code">EKO</span>
+                        </div>
+                    </div>
+                    <div class="role-body">
+                        <div class="role-section">
+                            <h4>Odpovědnost</h4>
+                            <p>Rozpočty, odhad nákladů, výnosy.</p>
+                        </div>
+                        <div class="role-section">
+                            <h4>Výstupy</h4>
+                            <p>Rozpočet, cash-flow analýza</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-header tdi">
+                        <span class="role-icon">🔍</span>
+                        <div>
+                            <h3>Technický dozor (TDI)</h3>
+                            <span class="role-code">TDI</span>
+                        </div>
+                    </div>
+                    <div class="role-body">
+                        <div class="role-section">
+                            <h4>Odpovědnost</h4>
+                            <p>Kontrola kvality stavby (soulad s PD).</p>
+                        </div>
+                        <div class="role-section">
+                            <h4>Výstupy</h4>
+                            <p>Protokoly, kolaudační podklady</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-header mkt">
+                        <span class="role-icon">📢</span>
+                        <div>
+                            <h3>Marketing / Sales Manager</h3>
+                            <span class="role-code">MKT</span>
+                        </div>
+                    </div>
+                    <div class="role-body">
+                        <div class="role-section">
+                            <h4>Odpovědnost</h4>
+                            <p>Příprava a realizace prodeje jednotek.</p>
+                        </div>
+                        <div class="role-section">
+                            <h4>Výstupy</h4>
+                            <p>Marketingový plán, sales proces</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-header leg">
+                        <span class="role-icon">⚖️</span>
+                        <div>
+                            <h3>Právník</h3>
+                            <span class="role-code">LEG</span>
+                        </div>
+                    </div>
+                    <div class="role-body">
+                        <div class="role-section">
+                            <h4>Odpovědnost</h4>
+                            <p>Smlouvy, stavební legislativa.</p>
+                        </div>
+                        <div class="role-section">
+                            <h4>Výstupy</h4>
+                            <p>Smluvní dokumentace, právní stanoviska</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rizika page -->
+        <section class="page" id="page-rizika">
+            <div class="page-header">
+                <h2>Matice rizik</h2>
+                <p class="page-subtitle">Identifikace a hodnocení projektových rizik</p>
+            </div>
+
+            <div class="risk-methodology">
+                <div class="method-card">
+                    <h4>Pravděpodobnost (P)</h4>
+                    <ul>
+                        <li><span class="badge p1">1</span> téměř nemožné</li>
+                        <li><span class="badge p2">2</span> málo pravděpodobné</li>
+                        <li><span class="badge p3">3</span> možné</li>
+                        <li><span class="badge p4">4</span> pravděpodobné</li>
+                        <li><span class="badge p5">5</span> téměř jisté</li>
+                    </ul>
+                </div>
+                <div class="method-card">
+                    <h4>Dopad (D)</h4>
+                    <ul>
+                        <li><span class="badge d1">1</span> zanedbatelný</li>
+                        <li><span class="badge d2">2</span> malý (lokální zpoždění)</li>
+                        <li><span class="badge d3">3</span> střední (čas/náklady)</li>
+                        <li><span class="badge d4">4</span> vysoký (zásadní změna)</li>
+                        <li><span class="badge d5">5</span> kritický (ohrožení projektu)</li>
+                    </ul>
+                </div>
+                <div class="method-card">
+                    <h4>Riziko (R = P × D)</h4>
+                    <ul>
+                        <li><span class="badge low">0–8</span> Nízké – sledujeme</li>
+                        <li><span class="badge medium">9–14</span> Střední – připravujeme opatření</li>
+                        <li><span class="badge high">15–25</span> Vysoké – aktivně řídíme</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="risk-table-wrapper">
+                <table class="risk-table">
+                    <thead>
+                        <tr>
+                            <th>Riziko</th>
+                            <th>P</th>
+                            <th>D</th>
+                            <th>R</th>
+                            <th>Opatření (mitigace)</th>
+                            <th>Odpovědnost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="risk-low">
+                            <td>Politické změny, legislativní</td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td><span class="risk-score low">4</span></td>
+                            <td>Právní monitoring, Pol. lobby</td>
+                            <td>LEG</td>
+                        </tr>
+                        <tr class="risk-low">
+                            <td>Zpoždění PD</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td><span class="risk-score low">6</span></td>
+                            <td>Smlouva – milníky</td>
+                            <td>ARCH, PM</td>
+                        </tr>
+                        <tr class="risk-medium">
+                            <td>Zdržení povolovacího řízení</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td><span class="risk-score medium">12</span></td>
+                            <td>Časová rezerva, komunikace</td>
+                            <td>PM</td>
+                        </tr>
+                        <tr class="risk-high">
+                            <td>Odpor veřejnosti (NIMBY)</td>
+                            <td>3</td>
+                            <td>5</td>
+                            <td><span class="risk-score high">15</span></td>
+                            <td>PR strategie, participace</td>
+                            <td>MKT, PR, LEG</td>
+                        </tr>
+                        <tr class="risk-medium">
+                            <td>Nárůst stavebních nákladů</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td><span class="risk-score medium">12</span></td>
+                            <td>Fixace cen</td>
+                            <td>PM, GD</td>
+                        </tr>
+                        <tr class="risk-medium">
+                            <td>Selhání GD</td>
+                            <td>2</td>
+                            <td>5</td>
+                            <td><span class="risk-score medium">10</span></td>
+                            <td>Bankovní záruky</td>
+                            <td>Investor</td>
+                        </tr>
+                        <tr class="risk-medium">
+                            <td>Růst úrokových sazeb</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td><span class="risk-score medium">12</span></td>
+                            <td>Rezerva, exit strategy</td>
+                            <td>PM</td>
+                        </tr>
+                        <tr class="risk-low">
+                            <td>Zvyšování cen služeb, energií</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td><span class="risk-score low">6</span></td>
+                            <td>Smlouvy s nájemníky</td>
+                            <td>PM, FM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="risk-matrix-visual">
+                <h3>Vizuální matice rizik</h3>
+                <div class="matrix-grid">
+                    <div class="matrix-y-label">Dopad →</div>
+                    <div class="matrix-x-label">Pravděpodobnost →</div>
+                    <div class="matrix-cell low"></div>
+                    <div class="matrix-cell low"></div>
+                    <div class="matrix-cell low"></div>
+                    <div class="matrix-cell medium"></div>
+                    <div class="matrix-cell medium"></div>
+                    <div class="matrix-cell low"></div>
+                    <div class="matrix-cell low"></div>
+                    <div class="matrix-cell medium"></div>
+                    <div class="matrix-cell medium"></div>
+                    <div class="matrix-cell high"></div>
+                    <div class="matrix-cell low"></div>
+                    <div class="matrix-cell medium risk-marker" data-risk="Zdržení,Náklady,Úroky"></div>
+                    <div class="matrix-cell medium"></div>
+                    <div class="matrix-cell high risk-marker" data-risk="NIMBY"></div>
+                    <div class="matrix-cell high"></div>
+                    <div class="matrix-cell low"></div>
+                    <div class="matrix-cell medium"></div>
+                    <div class="matrix-cell high"></div>
+                    <div class="matrix-cell high"></div>
+                    <div class="matrix-cell high"></div>
+                    <div class="matrix-cell medium"></div>
+                    <div class="matrix-cell medium"></div>
+                    <div class="matrix-cell high"></div>
+                    <div class="matrix-cell high"></div>
+                    <div class="matrix-cell high"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
