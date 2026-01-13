@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTR Nové Dvory – Projektový portál</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Mobile header -->
+    <header class="mobile-header">
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <h1>BTR Nové Dvory</h1>
+    </header>
+
+    <!-- Sidebar navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">🏗️</span>
+                <div class="logo-text">
+                    <strong>BTR Nové Dvory</strong>
+                    <small>Projektový portál</small>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="#dashboard" class="nav-link active" data-page="dashboard">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#harmonogram" class="nav-link" data-page="harmonogram">
+                        <span class="nav-icon">📅</span>
+                        <span class="nav-text">Harmonogram</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#role" class="nav-link" data-page="role">
+                        <span class="nav-icon">👥</span>
+                        <span class="nav-text">Role a struktura</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#rizika" class="nav-link" data-page="rizika">
+                        <span class="nav-icon">⚠️</span>
+                        <span class="nav-text">Matice rizik</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#rozpocet" class="nav-link" data-page="rozpocet">
+                        <span class="nav-icon">💰</span>
+                        <span class="nav-text">Rozpočet</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#logframe" class="nav-link" data-page="logframe">
+                        <span class="nav-icon">🎯</span>
+                        <span class="nav-text">Logický rámec</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="project-info">
+                <small>Projekt: BTR Premium</small>
+                <small>Lokalita: Praha – Krč</small>
+                <small>Termín: 2026–2029</small>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Overlay for mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main content -->
+    <main class="main-content">
+        <!-- Dashboard page -->
+        <section class="page active" id="page-dashboard">
+            <div class="page-header">
+                <h2>Dashboard</h2>
+                <p class="page-subtitle">Přehled projektu BTR Nové Dvory</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">📅</div>
+                    <div class="stat-content">
+                        <span class="stat-value">43</span>
+                        <span class="stat-label">měsíců celkem</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">✓</div>
+                    <div class="stat-content">
+                        <span class="stat-value">29</span>
+                        <span class="stat-label">aktivit na krit. cestě</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange">⚠️</div>
+                    <div class="stat-content">
+                        <span class="stat-value">8</span>
+                        <span class="stat-label">identifikovaných rizik</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon purple">👥</div>
+                    <div class="stat-content">
+                        <span class="stat-value">7</span>
+                        <span class="stat-label">klíčových rolí</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-cards">
+                <div class="info-card">
+                    <h3>📍 O projektu</h3>
+                    <ul>
+                        <li><strong>Typ:</strong> BTR bytový dům (Build-to-Rent)</li>
+                        <li><strong>Segment:</strong> Premium dlouhodobý pronájem</li>
+                        <li><strong>Parcely:</strong> 2869/219, 2869/271, 2869/281</li>
+                        <li><strong>Katastr:</strong> Krč, Praha</li>
+                        <li><strong>Lokalita:</strong> Nové Dvory</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>🗓️ Klíčové milníky</h3>
+                    <div class="milestone-list">
+                        <div class="milestone">
+                            <span class="milestone-date">07/2026</span>
+                            <span class="milestone-text">DPZ dokumentace</span>
+                        </div>
+                        <div class="milestone">
+                            <span class="milestone-date">10/2026</span>
+                            <span class="milestone-text">Povolení záměru</span>
+                        </div>
+                        <div class="milestone">
+                            <span class="milestone-date">05/2027</span>
+                            <span class="milestone-text">Zahájení stavby</span>
+                        </div>
+                        <div class="milestone">
+                            <span class="milestone-date">01/2029</span>
+                            <span class="milestone-text">Kolaudace</span>
+                        </div>
+                        <div class="milestone">
+                            <span class="milestone-date">08/2029</span>
+                            <span class="milestone-text">95% obsazenost</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card wide">
+                    <h3>⚡ Fáze projektu</h3>
+                    <div class="phases-timeline">
+                        <div class="phase-item" style="--phase-color: #c5e0b4;">
+                            <span class="phase-name">0: Příprava</span>
+                            <span class="phase-date">01–02/2026</span>
+                        </div>
+                        <div class="phase-item" style="--phase-color: #bdd7ee;">
+                            <span class="phase-name">1: Projektová příprava</span>
+                            <span class="phase-date">01/2026–02/2027</span>
+                        </div>
+                        <div class="phase-item" style="--phase-color: #ffe699;">
+                            <span class="phase-name">2: Výběr dodavatele</span>
+                            <span class="phase-date">02–04/2027</span>
+                        </div>
+                        <div class="phase-item" style="--phase-color: #f8cbad;">
+                            <span class="phase-name">3: Realizace</span>
+                            <span class="phase-date">05/2027–01/2029</span>
+                        </div>
+                        <div class="phase-item" style="--phase-color: #d9d2e9;">
+                            <span class="phase-name">4: Provoz</span>
+                            <span class="phase-date">01–08/2029</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Harmonogram page -->
+        <section class="page" id="page-harmonogram">
+            <div class="page-header">
+                <h2>Harmonogram projektu</h2>
+                <p class="page-subtitle">Ganttův diagram s kritickou cestou</p>
+            </div>
+
+            <div class="gantt-controls">
+                <label>
+                    <span>Fáze:</span>
+                    <select id="phaseFilter">
+                        <option value="all">Všechny fáze</option>
+                        <option value="0">0: Příprava</option>
+                        <option value="0A">0A: Financování I</option>
+                        <option value="1">1: Projektová příprava</option>
+                        <option value="1A">1A: Financování II</option>
+                        <option value="2">2: Výběr dodavatele</option>
+                        <option value="3">3: Realizace</option>
+                        <option value="4">4: Provoz</option>
+                    </select>
+                </label>
+                <label>
+                    <span>Role:</span>
+                    <select id="roleFilter">
+                        <option value="all">Všechny role</option>
+                        <option value="INV">INV - Investor</option>
+                        <option value="PM">PM - Projektový manažer</option>
+                        <option value="ARCH">ARCH - Architekt</option>
+                        <option value="PROJ">PROJ - Projektant</option>
+                        <option value="EKO">EKO - Ekonom</option>
+                        <option value="ING">ING - Inženýring</option>
+                        <option value="LEG">LEG - Legal</option>
+                        <option value="GD">GD - Generální dodavatel</option>
+                        <option value="TDI">TDI - Technický dozor</option>
+                        <option value="MKT">MKT - Marketing</option>
+                        <option value="FM">FM - Facility manager</option>
+                    </select>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="criticalOnly">
+                    <span>Pouze kritická cesta</span>
+                </label>
+            </div>
+
+            <div class="gantt-legend">
+                <div class="legend-item"><div class="legend-color phase-0"></div><span>0: Příprava</span></div>
+                <div class="legend-item"><div class="legend-color phase-0A"></div><span>0A</span></div>
+                <div class="legend-item"><div class="legend-color phase-1"></div><span>1: Projekt</span></div>
+                <div class="legend-item"><div class="legend-color phase-1A"></div><span>1A</span></div>
+                <div class="legend-item"><div class="legend-color phase-2"></div><span>2: Výběr</span></div>
+                <div class="legend-item"><div class="legend-color phase-3"></div><span>3: Realizace</span></div>
+                <div class="legend-item"><div class="legend-color phase-4"></div><span>4: Provoz</span></div>
+                <div class="legend-item"><div class="legend-color risk"></div><span>Riziko</span></div>
+            </div>
+
+            <!-- Mobile view toggle -->
+            <div class="view-toggle">
+                <button id="btnList" class="active">📋 Seznam</button>
+                <button id="btnGantt">📊 Gantt</button>
+            </div>
+
+            <!-- Desktop Gantt -->
+            <div class="gantt-wrapper" id="ganttWrapper">
+                <div class="gantt-container">
+                    <div class="gantt-header">
+                        <div class="gantt-col-code">Kód</div>
+                        <div class="gantt-col-name">Aktivita</div>
+                        <div class="gantt-col-resp">Role</div>
+                        <div class="gantt-timeline">
+                            <div class="year-marker">2026</div>
+                            <div class="year-marker">2027</div>
+                            <div class="year-marker">2028</div>
+                            <div class="year-marker">2029</div>
+                        </div>
+                    </div>
+                    <div class="gantt-quarters">
+                        <div class="gantt-col-code">#</div>
+                        <div class="gantt-col-name">Název</div>
+                        <div class="gantt-col-resp">Odpov.</div>
+                        <div class="gantt-timeline" id="quarterMarkers"></div>
+                    </div>
+                    <div class="gantt-body" id="ganttBody"></div>
+                </div>
+            </div>
+
+            <!-- Mobile list -->
+            <div class="mobile-list" id="mobileList"></div>
+
+            <div class="gantt-summary">
+                <div class="summary-card blue">
+                    <h4>📊 Kritická cesta</h4>
+                    <p>29 aktivit, 189 týdnů</p>
+                </div>
+                <div class="summary-card red">
+                    <h4>⚠️ Nejvyšší riziko</h4>
+                    <p>3.5 Hrubá stavba (22 týdnů)</p>
+                </div>
+                <div class="summary-card green">
+                    <h4>✓ Termín</h4>
+                    <p>1.1.2026 → 17.8.2029</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Role page -->
+        <section class="page" id="page-role">
+            <div class="page-header">
+                <h2>Role a struktura projektu</h2>
+                <p class="page-subtitle">Řídící struktura a odpovědnosti</p>
+            </div>
+
+            <div class="roles-grid">
+                <div class="role-card">
+                    <div class="role-header inv">
+                        <span class="role-icon">💼</span>
+                        <div>
+                            <h3>Investor / Developer</h3>
+                            <span class="role-code">INV</span>
+                        </div>
+                    </div>
+                    <div class="role-body">
+                        <div class="role-section">
+                            <h4>Odpovědnost</h4>
+                            <p>Schvalování rozpočtu, klíčová rozhodnutí. Odpovědnost za projekt jako celek.</p>
+                        </div>
+                        <div class="role-section">
+                            <h4>Výstupy</h4>
+                            <p>Business plán, investiční rozhodnutí</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-header pm">
+                        <span class="role-icon">📋</span>
+                        <div>
+                            <h3>Projektový manažer</h3>
+                            <span class="role-code">PM</span>
+                        </div>
+                    </div>
+                    <div class="role-body">
+                        <div class="role-section">
+                            <h4>Odpovědnost</h4>
+                            <p>Koordinace práce, harmonogram, reporting.</p>
+                        </div>
+                        <div class="role-section">
+                            <h4>Výstupy</h4>
+                            <p>Harmonogram, reporting, registr rizik</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-header arch">
+                        <span class="role-icon">🏛️</span>
+                        <div>
+                            <h3>Architekt / Urbanista</h3>
+                            <span class="role-code">ARCH</span>
+                        </div>
+                    </div>
+                    <div class="role-body">
+                        <div class="role-section">
+                            <h4>Odpovědnost</h4>
+                            <p>Návrh řešení, prostorový a společenský koncept.</p>
+                        </div>
+                        <div class="role-section">
+                            <h4>Výstupy</h4>
+                            <p>Architektonická studie, projektová dokumentace pro stavební povolení</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-header eko">
+                        <span class="role-icon">💰</span>
+                        <div>
+                            <h3>Ekonom / Cost Manager</h3>
+                            <span class="role-code">EKO</span>
+                        </div>
+                    </div>
+                    <div class="role-body">
+                        <div class="role-section">
+                            <h4>Odpovědnost</h4>
+                            <p>Rozpočty, odhad nákladů, výnosy.</p>
+                        </div>
+                        <div class="role-section">
+                            <h4>Výstupy</h4>
+                            <p>Rozpočet, cash-flow analýza</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-header tdi">
+                        <span class="role-icon">🔍</span>
+                        <div>
+                            <h3>Technický dozor (TDI)</h3>
+                            <span class="role-code">TDI</span>
+                        </div>
+                    </div>
+                    <div class="role-body">
+                        <div class="role-section">
+                            <h4>Odpovědnost</h4>
+                            <p>Kontrola kvality stavby (soulad s PD).</p>
+                        </div>
+                        <div class="role-section">
+                            <h4>Výstupy</h4>
+                            <p>Protokoly, kolaudační podklady</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-header mkt">
+                        <span class="role-icon">📢</span>
+                        <div>
+                            <h3>Marketing / Sales Manager</h3>
+                            <span class="role-code">MKT</span>
+                        </div>
+                    </div>
+                    <div class="role-body">
+                        <div class="role-section">
+                            <h4>Odpovědnost</h4>
+                            <p>Příprava a realizace prodeje jednotek.</p>
+                        </div>
+                        <div class="role-section">
+                            <h4>Výstupy</h4>
+                            <p>Marketingový plán, sales proces</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="role-card">
+                    <div class="role-header leg">
+                        <span class="role-icon">⚖️</span>
+                        <div>
+                            <h3>Právník</h3>
+                            <span class="role-code">LEG</span>
+                        </div>
+                    </div>
+                    <div class="role-body">
+                        <div class="role-section">
+                            <h4>Odpovědnost</h4>
+                            <p>Smlouvy, stavební legislativa.</p>
+                        </div>
+                        <div class="role-section">
+                            <h4>Výstupy</h4>
+                            <p>Smluvní dokumentace, právní stanoviska</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rizika page -->
+        <section class="page" id="page-rizika">
+            <div class="page-header">
+                <h2>Matice rizik</h2>
+                <p class="page-subtitle">Identifikace a hodnocení projektových rizik</p>
+            </div>
+
+            <div class="risk-methodology">
+                <div class="method-card">
+                    <h4>Pravděpodobnost (P)</h4>
+                    <ul>
+                        <li><span class="badge p1">1</span> téměř nemožné</li>
+                        <li><span class="badge p2">2</span> málo pravděpodobné</li>
+                        <li><span class="badge p3">3</span> možné</li>
+                        <li><span class="badge p4">4</span> pravděpodobné</li>
+                        <li><span class="badge p5">5</span> téměř jisté</li>
+                    </ul>
+                </div>
+                <div class="method-card">
+                    <h4>Dopad (D)</h4>
+                    <ul>
+                        <li><span class="badge d1">1</span> zanedbatelný</li>
+                        <li><span class="badge d2">2</span> malý (lokální zpoždění)</li>
+                        <li><span class="badge d3">3</span> střední (čas/náklady)</li>
+                        <li><span class="badge d4">4</span> vysoký (zásadní změna)</li>
+                        <li><span class="badge d5">5</span> kritický (ohrožení projektu)</li>
+                    </ul>
+                </div>
+                <div class="method-card">
+                    <h4>Riziko (R = P × D)</h4>
+                    <ul>
+                        <li><span class="badge low">0–8</span> Nízké – sledujeme</li>
+                        <li><span class="badge medium">9–14</span> Střední – připravujeme opatření</li>
+                        <li><span class="badge high">15–25</span> Vysoké – aktivně řídíme</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="risk-table-wrapper">
+                <table class="risk-table">
+                    <thead>
+                        <tr>
+                            <th>Riziko</th>
+                            <th>P</th>
+                            <th>D</th>
+                            <th>R</th>
+                            <th>Opatření (mitigace)</th>
+                            <th>Odpovědnost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="risk-low">
+                            <td>Politické změny, legislativní</td>
+                            <td>1</td>
+                            <td>4</td>
+                            <td><span class="risk-score low">4</span></td>
+                            <td>Právní monitoring, Pol. lobby</td>
+                            <td>LEG</td>
+                        </tr>
+                        <tr class="risk-low">
+                            <td>Zpoždění PD</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td><span class="risk-score low">6</span></td>
+                            <td>Smlouva – milníky</td>
+                            <td>ARCH, PM</td>
+                        </tr>
+                        <tr class="risk-medium">
+                            <td>Zdržení povolovacího řízení</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td><span class="risk-score medium">12</span></td>
+                            <td>Časová rezerva, komunikace</td>
+                            <td>PM</td>
+                        </tr>
+                        <tr class="risk-high">
+                            <td>Odpor veřejnosti (NIMBY)</td>
+                            <td>3</td>
+                            <td>5</td>
+                            <td><span class="risk-score high">15</span></td>
+                            <td>PR strategie, participace</td>
+                            <td>MKT, PR, LEG</td>
+                        </tr>
+                        <tr class="risk-medium">
+                            <td>Nárůst stavebních nákladů</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td><span class="risk-score medium">12</span></td>
+                            <td>Fixace cen</td>
+                            <td>PM, GD</td>
+                        </tr>
+                        <tr class="risk-medium">
+                            <td>Selhání GD</td>
+                            <td>2</td>
+                            <td>5</td>
+                            <td><span class="risk-score medium">10</span></td>
+                            <td>Bankovní záruky</td>
+                            <td>Investor</td>
+                        </tr>
+                        <tr class="risk-medium">
+                            <td>Růst úrokových sazeb</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td><span class="risk-score medium">12</span></td>
+                            <td>Rezerva, exit strategy</td>
+                            <td>PM</td>
+                        </tr>
+                        <tr class="risk-low">
+                            <td>Zvyšování cen služeb, energií</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td><span class="risk-score low">6</span></td>
+                            <td>Smlouvy s nájemníky</td>
+                            <td>PM, FM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="risk-matrix-visual">
+                <h3>Vizuální matice rizik</h3>
+                <div class="matrix-grid">
+                    <div class="matrix-y-label">Dopad →</div>
+                    <div class="matrix-x-label">Pravděpodobnost →</div>
+                    <div class="matrix-cell low"></div>
+                    <div class="matrix-cell low"></div>
+                    <div class="matrix-cell low"></div>
+                    <div class="matrix-cell medium"></div>
+                    <div class="matrix-cell medium"></div>
+                    <div class="matrix-cell low"></div>
+                    <div class="matrix-cell low"></div>
+                    <div class="matrix-cell medium"></div>
+                    <div class="matrix-cell medium"></div>
+                    <div class="matrix-cell high"></div>
+                    <div class="matrix-cell low"></div>
+                    <div class="matrix-cell medium risk-marker" data-risk="Zdržení,Náklady,Úroky"></div>
+                    <div class="matrix-cell medium"></div>
+                    <div class="matrix-cell high risk-marker" data-risk="NIMBY"></div>
+                    <div class="matrix-cell high"></div>
+                    <div class="matrix-cell low"></div>
+                    <div class="matrix-cell medium"></div>
+                    <div class="matrix-cell high"></div>
+                    <div class="matrix-cell high"></div>
+                    <div class="matrix-cell high"></div>
+                    <div class="matrix-cell medium"></div>
+                    <div class="matrix-cell medium"></div>
+                    <div class="matrix-cell high"></div>
+                    <div class="matrix-cell high"></div>
+                    <div class="matrix-cell high"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rozpočet page -->
+        <section class="page" id="page-rozpocet">
+            <div class="page-header">
+                <h2>Rozpočet projektu</h2>
+                <p class="page-subtitle">Finanční přehled BTR Nové Dvory</p>
+            </div>
+
+            <!-- KPI Summary -->
+            <div class="budget-kpi-grid">
+                <div class="budget-kpi-card primary">
+                    <div class="kpi-label">Celkové náklady</div>
+                    <div class="kpi-value">909,9 mil. Kč</div>
+                    <div class="kpi-sub">vč. finančních nákladů 113,2 mil.</div>
+                </div>
+                <div class="budget-kpi-card success">
+                    <div class="kpi-label">Kapitálová hodnota</div>
+                    <div class="kpi-value">1 073,9 mil. Kč</div>
+                    <div class="kpi-sub">yield 4,9%</div>
+                </div>
+                <div class="budget-kpi-card warning">
+                    <div class="kpi-label">Zisk developera</div>
+                    <div class="kpi-value">164,0 mil. Kč</div>
+                    <div class="kpi-sub">18,0% z nákladů</div>
+                </div>
+                <div class="budget-kpi-card info">
+                    <div class="kpi-label">Roční NOI</div>
+                    <div class="kpi-value">52,2 mil. Kč</div>
+                    <div class="kpi-sub">yield on cost 6,39%</div>
+                </div>
+            </div>
+
+            <!-- Cost Structure -->
+            <div class="budget-section">
+                <h3>📊 Struktura nákladů</h3>
+                <div class="cost-breakdown">
+                    <div class="cost-table-wrapper">
+                        <table class="cost-table">
+                            <thead>
+                                <tr>
+                                    <th>Kategorie</th>
+                                    <th class="text-right">Částka (Kč)</th>
+                                    <th class="text-right">Podíl</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="section-header">
+                                    <td colspan="3">I. Stavební náklady</td>
+                                </tr>
+                                <tr>
+                                    <td class="indent">Základní cena monolitického BD</td>
+                                    <td class="text-right">368 877 000</td>
+                                    <td class="text-right">40,5%</td>
+                                </tr>
+                                <tr>
+                                    <td class="indent">Premium příplatek</td>
+                                    <td class="text-right">47 954 010</td>
+                                    <td class="text-right">5,3%</td>
+                                </tr>
+                                <tr>
+                                    <td class="indent">Příplatek Praha</td>
+                                    <td class="text-right">36 887 700</td>
+                                    <td class="text-right">4,1%</td>
+                                </tr>
+                                <tr>
+                                    <td class="indent">Parkování (m² příplatek)</td>
+                                    <td class="text-right">145 254 000</td>
+                                    <td class="text-right">16,0%</td>
+                                </tr>
+                                <tr>
+                                    <td class="indent">Zařízení bytů</td>
+                                    <td class="text-right">35 988 000</td>
+                                    <td class="text-right">4,0%</td>
+                                </tr>
+                                <tr class="subtotal">
+                                    <td>I. Celkem stavba</td>
+                                    <td class="text-right">716 872 102</td>
+                                    <td class="text-right">78,8%</td>
+                                </tr>
+                                <tr class="section-header">
+                                    <td colspan="3">II. Náklady na pořízení</td>
+                                </tr>
+                                <tr>
+                                    <td class="indent">Kupní cena pozemku</td>
+                                    <td class="text-right">96 348 000</td>
+                                    <td class="text-right">10,6%</td>
+                                </tr>
+                                <tr>
+                                    <td class="indent">Provize a vlastní náklady</td>
+                                    <td class="text-right">2 890 440</td>
+                                    <td class="text-right">0,3%</td>
+                                </tr>
+                                <tr>
+                                    <td class="indent">Studie a přípravné práce</td>
+                                    <td class="text-right">1 844 385</td>
+                                    <td class="text-right">0,2%</td>
+                                </tr>
+                                <tr class="subtotal">
+                                    <td>II. Celkem pořízení</td>
+                                    <td class="text-right">122 687 257</td>
+                                    <td class="text-right">13,5%</td>
+                                </tr>
+                                <tr class="section-header">
+                                    <td colspan="3">III. Odborné služby</td>
+                                </tr>
+                                <tr>
+                                    <td class="indent">Projekt (DSP, DPS, ADP)</td>
+                                    <td class="text-right">18 443 850</td>
+                                    <td class="text-right">2,0%</td>
+                                </tr>
+                                <tr>
+                                    <td class="indent">Inženýring, TDI, BOZP</td>
+                                    <td class="text-right">14 755 080</td>
+                                    <td class="text-right">1,6%</td>
+                                </tr>
+                                <tr class="subtotal">
+                                    <td>III. Celkem služby</td>
+                                    <td class="text-right">39 616 117</td>
+                                    <td class="text-right">4,4%</td>
+                                </tr>
+                                <tr class="section-header">
+                                    <td colspan="3">IV. Marketing a RK</td>
+                                </tr>
+                                <tr class="subtotal">
+                                    <td>IV. Celkem marketing</td>
+                                    <td class="text-right">14 755 080</td>
+                                    <td class="text-right">1,6%</td>
+                                </tr>
+                                <tr class="section-header">
+                                    <td colspan="3">V. Finanční náklady</td>
+                                </tr>
+                                <tr>
+                                    <td class="indent">Úroky během výstavby</td>
+                                    <td class="text-right">97 233 797</td>
+                                    <td class="text-right">10,7%</td>
+                                </tr>
+                                <tr>
+                                    <td class="indent">Období bez příjmů</td>
+                                    <td class="text-right">15 978 978</td>
+                                    <td class="text-right">1,8%</td>
+                                </tr>
+                                <tr class="subtotal">
+                                    <td>V. Celkem financování</td>
+                                    <td class="text-right">113 212 775</td>
+                                    <td class="text-right">12,4%</td>
+                                </tr>
+                                <tr class="total">
+                                    <td><strong>CELKOVÉ NÁKLADY</strong></td>
+                                    <td class="text-right"><strong>909 909 535</strong></td>
+                                    <td class="text-right"><strong>100%</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="cost-chart">
+                        <h4>Vizualizace nákladů</h4>
+                        <div class="cost-bar-chart">
+                            <div class="cost-bar" style="--width: 78.8%; --color: #4e79a7;">
+                                <span class="bar-label">Stavba</span>
+                                <span class="bar-value">78,8%</span>
+                            </div>
+                            <div class="cost-bar" style="--width: 13.5%; --color: #f28e2c;">
+                                <span class="bar-label">Pořízení</span>
+                                <span class="bar-value">13,5%</span>
+                            </div>
+                            <div class="cost-bar" style="--width: 4.4%; --color: #e15759;">
+                                <span class="bar-label">Služby</span>
+                                <span class="bar-value">4,4%</span>
+                            </div>
+                            <div class="cost-bar" style="--width: 1.6%; --color: #76b7b2;">
+                                <span class="bar-label">Marketing</span>
+                                <span class="bar-value">1,6%</span>
+                            </div>
+                            <div class="cost-bar" style="--width: 12.4%; --color: #59a14f;">
+                                <span class="bar-label">Financování</span>
+                                <span class="bar-value">12,4%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Revenue Structure -->
+            <div class="budget-section">
+                <h3>📈 Výnosová stránka (roční)</h3>
+                <div class="revenue-grid">
+                    <div class="revenue-card">
+                        <h4>Flatmix a nájmy</h4>
+                        <table class="revenue-table">
+                            <thead>
+                                <tr>
+                                    <th>Typ</th>
+                                    <th>Jednotky</th>
+                                    <th>m²</th>
+                                    <th>Kč/m²/měs.</th>
+                                    <th>Roční nájem</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1+kk</td>
+                                    <td class="text-center">66</td>
+                                    <td class="text-right">1 980</td>
+                                    <td class="text-right">730</td>
+                                    <td class="text-right">17 344 800</td>
+                                </tr>
+                                <tr>
+                                    <td>2+kk</td>
+                                    <td class="text-center">36</td>
+                                    <td class="text-right">1 620</td>
+                                    <td class="text-right">710</td>
+                                    <td class="text-right">13 802 400</td>
+                                </tr>
+                                <tr>
+                                    <td>3+kk</td>
+                                    <td class="text-center">14</td>
+                                    <td class="text-right">910</td>
+                                    <td class="text-right">685</td>
+                                    <td class="text-right">7 480 200</td>
+                                </tr>
+                                <tr>
+                                    <td>4+kk</td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-right">255</td>
+                                    <td class="text-right">660</td>
+                                    <td class="text-right">2 019 600</td>
+                                </tr>
+                                <tr class="highlight">
+                                    <td><strong>Byty celkem</strong></td>
+                                    <td class="text-center"><strong>119</strong></td>
+                                    <td class="text-right"><strong>4 765</strong></td>
+                                    <td class="text-right">—</td>
+                                    <td class="text-right"><strong>40 647 000</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="revenue-card">
+                        <h4>Komerční a ostatní plochy</h4>
+                        <table class="revenue-table">
+                            <thead>
+                                <tr>
+                                    <th>Typ</th>
+                                    <th>Jednotky</th>
+                                    <th>m²</th>
+                                    <th>Kč/m²/měs.</th>
+                                    <th>Roční nájem</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Café, Cowork, Fitness</td>
+                                    <td class="text-center">9</td>
+                                    <td class="text-right">1 350</td>
+                                    <td class="text-right">850</td>
+                                    <td class="text-right">13 770 000</td>
+                                </tr>
+                                <tr>
+                                    <td>Střecha (terasa)</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-right">1 600</td>
+                                    <td class="text-right">290</td>
+                                    <td class="text-right">5 568 000</td>
+                                </tr>
+                                <tr>
+                                    <td>Garážové stání</td>
+                                    <td class="text-center">120</td>
+                                    <td class="text-right">3 360</td>
+                                    <td class="text-right">100</td>
+                                    <td class="text-right">4 032 000</td>
+                                </tr>
+                                <tr>
+                                    <td>Parkovací stání</td>
+                                    <td class="text-center">30</td>
+                                    <td class="text-right">840</td>
+                                    <td class="text-right">50</td>
+                                    <td class="text-right">504 000</td>
+                                </tr>
+                                <tr class="highlight">
+                                    <td><strong>Komerční celkem</strong></td>
+                                    <td class="text-center">—</td>
+                                    <td class="text-right">—</td>
+                                    <td class="text-right">—</td>
+                                    <td class="text-right"><strong>23 874 000</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="revenue-summary">
+                    <div class="revenue-summary-item">
+                        <span class="label">Roční hrubý nájem:</span>
+                        <span class="value">64 521 000 Kč</span>
+                    </div>
+                    <div class="revenue-summary-item">
+                        <span class="label">Obsazenost (94%):</span>
+                        <span class="value">60 649 740 Kč</span>
+                    </div>
+                    <div class="revenue-summary-item">
+                        <span class="label">OPEX (14%):</span>
+                        <span class="value">-8 490 964 Kč</span>
+                    </div>
+                    <div class="revenue-summary-item highlight">
+                        <span class="label">NOI (čistý provozní výnos):</span>
+                        <span class="value">52 158 776 Kč</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financing -->
+            <div class="budget-section">
+                <h3>🏦 Financování projektu</h3>
+                <div class="financing-grid">
+                    <div class="financing-card">
+                        <h4>Struktura financování</h4>
+                        <div class="financing-visual">
+                            <div class="financing-bar">
+                                <div class="equity-part" style="width: 30%;">
+                                    <span>Equity 30%</span>
+                                </div>
+                                <div class="debt-part" style="width: 70%;">
+                                    <span>Úvěr 70%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="financing-table">
+                            <tr>
+                                <td>Vlastní kapitál (30%)</td>
+                                <td class="text-right">249 272 000 Kč</td>
+                            </tr>
+                            <tr>
+                                <td>Bankovní úvěr (70%)</td>
+                                <td class="text-right">581 634 000 Kč</td>
+                            </tr>
+                            <tr class="highlight">
+                                <td><strong>Celkem</strong></td>
+                                <td class="text-right"><strong>830 906 000 Kč</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="financing-card">
+                        <h4>Parametry úvěru</h4>
+                        <table class="params-table">
+                            <tr>
+                                <td>LTV (Loan to Value)</td>
+                                <td class="text-right">70%</td>
+                            </tr>
+                            <tr>
+                                <td>Úroková sazba</td>
+                                <td class="text-right">6,03% p.a.</td>
+                            </tr>
+                            <tr>
+                                <td>– z toho marže banky</td>
+                                <td class="text-right">2,50%</td>
+                            </tr>
+                            <tr>
+                                <td>– z toho 1M PRIBOR</td>
+                                <td class="text-right">3,53%</td>
+                            </tr>
+                            <tr>
+                                <td>Splatnost</td>
+                                <td class="text-right">30 let</td>
+                            </tr>
+                            <tr>
+                                <td>Poplatek za zpracování</td>
+                                <td class="text-right">0,5%</td>
+                            </tr>
+                            <tr>
+                                <td>DSCR minimální</td>
+                                <td class="text-right">1,20</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="budget-section">
+                <h3>📐 Klíčové metriky</h3>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon">📏</div>
+                        <div class="metric-content">
+                            <div class="metric-label">Pozemek</div>
+                            <div class="metric-value">3 441 m²</div>
+                            <div class="metric-sub">28 000 Kč/m²</div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">🏢</div>
+                        <div class="metric-content">
+                            <div class="metric-label">HPP celkem</div>
+                            <div class="metric-value">8 997 m²</div>
+                            <div class="metric-sub">vč. 2 podzemních podlaží</div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">🏠</div>
+                        <div class="metric-content">
+                            <div class="metric-label">ČPP byty</div>
+                            <div class="metric-value">4 765 m²</div>
+                            <div class="metric-sub">119 bytových jednotek</div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">🚗</div>
+                        <div class="metric-content">
+                            <div class="metric-label">Parkování</div>
+                            <div class="metric-value">150 stání</div>
+                            <div class="metric-sub">120 garáž + 30 venkovních</div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">💵</div>
+                        <div class="metric-content">
+                            <div class="metric-label">Náklady/m² ČPP</div>
+                            <div class="metric-value">80 005 Kč</div>
+                            <div class="metric-sub">stavební náklady</div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">📈</div>
+                        <div class="metric-content">
+                            <div class="metric-label">Yield on Cost</div>
+                            <div class="metric-value">6,39%</div>
+                            <div class="metric-sub">NOI / celkové náklady</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logický rámec page -->
+        <section class="page" id="page-logframe">
+            <div class="page-header">
+                <h2>Logický rámec projektu</h2>
+                <p class="page-subtitle">LFA matice – BTR Nové Dvory</p>
+            </div>
+
+            <div class="logframe-intro">
+                <div class="logframe-info-card">
+                    <h4>📋 O projektu</h4>
+                    <p><strong>BTR Projekt Nové Dvory</strong> – Bytový dům pro dlouhodobý pronájem (premium segment)</p>
+                    <p>Parcely: 2869/219, 2869/271, 2869/281, k. ú. Krč, Praha</p>
+                </div>
+                <div class="logframe-info-card">
+                    <h4>🔄 Vertikální logika</h4>
+                    <ul>
+                        <li>JESTLIŽE provedeme klíčové aktivity → PAK dosáhneme výstupů</li>
+                        <li>JESTLIŽE dosáhneme výstupů + splní se předpoklady → PAK naplníme cíl</li>
+                        <li>JESTLIŽE naplníme cíl + splní se vnější předpoklady → PAK přispějeme k přínosům</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="logframe-table-wrapper">
+                <table class="logframe-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 22%;">Popis</th>
+                            <th style="width: 26%;">Objektivně ověřitelné ukazatele (OOI)</th>
+                            <th style="width: 22%;">Zdroje ověření</th>
+                            <th style="width: 30%;">Předpoklady / Rizika</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="level-header benefits">
+                            <td colspan="4">PŘÍNOSY (Záměr)</td>
+                        </tr>
+                        <tr class="level-benefits">
+                            <td>Přispět ke zvýšení hodnoty lokality Nové Dvory rozšířením kvalitní rezidenční nabídky a podpořit strategii firmy v oblasti BTR.</td>
+                            <td>
+                                <ul>
+                                    <li>Zvýšení průměrné ceny m² v lokalitě o 5 % do 3 let od kolaudace</li>
+                                    <li>Stabilní obsazenost BTR projektů v lokalitě ≥ 90 %</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Cenové mapy ČÚZK</li>
+                                    <li>Statistiky realitních portálů</li>
+                                    <li>Interní reporting firmy</li>
+                                </ul>
+                            </td>
+                            <td class="assumptions">(Přínosy jsou mimo přímou kontrolu projektu)</td>
+                        </tr>
+                        <tr class="level-header goal">
+                            <td colspan="4">CÍL (Účel projektu)</td>
+                        </tr>
+                        <tr class="level-goal">
+                            <td>Zkolaudovaný a komerčně stabilizovaný bytový dům pro dlouhodobý pronájem v premium segmentu s dosažením cílové obsazenosti a výnosnosti.</td>
+                            <td>
+                                <ul>
+                                    <li>Kolaudace budovy se standardem dle tech. konceptu (energetická třída min. B)</li>
+                                    <li>Obsazenost 95 % do 12 měsíců od kolaudace</li>
+                                    <li>DSCR ≥ 1,2 po stabilizaci</li>
+                                    <li>Výnos dle schváleného business plánu</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Kolaudační rozhodnutí</li>
+                                    <li>PENB certifikát</li>
+                                    <li>Bankovní monitoring</li>
+                                    <li>Nájemní smlouvy</li>
+                                    <li>Provozní reporting</li>
+                                </ul>
+                            </td>
+                            <td class="assumptions">
+                                <ul>
+                                    <li>Stabilní makroekonomické prostředí</li>
+                                    <li>Zachování regulatorního rámce</li>
+                                    <li>Dostatečná poptávka po premium bydlení</li>
+                                    <li>Dostupnost bankovního financování</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="level-header outputs">
+                            <td colspan="4">VÝSTUPY</td>
+                        </tr>
+                        <tr class="level-outputs">
+                            <td>
+                                <ol>
+                                    <li>Analýzy a přípravné podklady</li>
+                                    <li>Projektová dokumentace a povolení</li>
+                                    <li>Dokončená stavba</li>
+                                    <li>Provozní a obchodní model</li>
+                                </ol>
+                            </td>
+                            <td>
+                                <div class="ooi-group">
+                                    <strong>1. Analýzy:</strong>
+                                    <ul>
+                                        <li>Situační analýza, SWOT</li>
+                                        <li>Definovaná cílová skupina</li>
+                                        <li>Schválená ekonomická pre-feasibility</li>
+                                    </ul>
+                                </div>
+                                <div class="ooi-group">
+                                    <strong>2. Dokumentace:</strong>
+                                    <ul>
+                                        <li>Architektonická studie</li>
+                                        <li>DPZ dokumentace</li>
+                                        <li>Vydané povolení záměru</li>
+                                        <li>Podepsaná úvěrová smlouva</li>
+                                    </ul>
+                                </div>
+                                <div class="ooi-group">
+                                    <strong>3. Stavba:</strong>
+                                    <ul>
+                                        <li>Dokončená hrubá stavba</li>
+                                        <li>Zkolaudovaná budova</li>
+                                        <li>Energetická třída min. B</li>
+                                    </ul>
+                                </div>
+                                <div class="ooi-group">
+                                    <strong>4. Provoz:</strong>
+                                    <ul>
+                                        <li>Provozní manuál budovy</li>
+                                        <li>Funkční FM systém</li>
+                                        <li>Obsazenost 50 % do 3 měsíců</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="ooi-group">
+                                    <strong>1:</strong> Analytická zpráva, GIS data, interní dokumenty
+                                </div>
+                                <div class="ooi-group">
+                                    <strong>2:</strong> Smlouvy s projektanty, projektová dokumentace, rozhodnutí SÚ, PENB, výkaz výměr
+                                </div>
+                                <div class="ooi-group">
+                                    <strong>3:</strong> Stavební deník, dokumentace skutečného provedení, kolaudační rozhodnutí
+                                </div>
+                                <div class="ooi-group">
+                                    <strong>4:</strong> Provozní reporty, datové výstupy z budovy, správcovské smlouvy
+                                </div>
+                            </td>
+                            <td class="assumptions">
+                                <ul>
+                                    <li>Dostupnost dat pro analýzy</li>
+                                    <li>Jasné majetkoprávní vztahy</li>
+                                    <li>Součinnost DOSS a stavebního úřadu</li>
+                                    <li>Stabilita regulatorních podmínek</li>
+                                    <li>Dostupnost generálního dodavatele</li>
+                                    <li>Kontrolovaný růst stavebních nákladů</li>
+                                    <li>Fungující dodavatelský řetězec</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="level-header activities">
+                            <td colspan="4">KLÍČOVÉ AKTIVITY</td>
+                        </tr>
+                        <tr class="level-activities">
+                            <td>
+                                <div class="activity-group">
+                                    <strong>A1: Přípravná fáze</strong>
+                                    <ul>
+                                        <li>Právní prověrka a akvizice</li>
+                                        <li>Urbanistické a technické analýzy</li>
+                                        <li>Ekonomická a socio-demografická analýza</li>
+                                    </ul>
+                                </div>
+                                <div class="activity-group">
+                                    <strong>A2: Projektová příprava</strong>
+                                    <ul>
+                                        <li>Architektonická studie</li>
+                                        <li>Tvorba DPZ</li>
+                                        <li>Jednání s DOSS a SÚ</li>
+                                        <li>Zajištění financování</li>
+                                    </ul>
+                                </div>
+                                <div class="activity-group">
+                                    <strong>A3: Realizace</strong>
+                                    <ul>
+                                        <li>Výběr dodavatele</li>
+                                        <li>Stavba, TDI, BOZP, AD</li>
+                                    </ul>
+                                </div>
+                                <div class="activity-group">
+                                    <strong>A4: Komercializace</strong>
+                                    <ul>
+                                        <li>Marketing a pronájem</li>
+                                        <li>Nastavení FM</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>
+                                <strong>ZDROJE (ROZPOČET)</strong>
+                                <div class="resource-group">
+                                    <em>Lidské zdroje:</em>
+                                    <ul>
+                                        <li>Projektový manažer</li>
+                                        <li>Development tým</li>
+                                        <li>Externí konzultanti</li>
+                                    </ul>
+                                </div>
+                                <div class="resource-group">
+                                    <em>Finanční zdroje:</em>
+                                    <ul>
+                                        <li>Vlastní kapitál: dle equity plánu</li>
+                                        <li>Bankovní úvěr: dle LTV</li>
+                                        <li>Projektové náklady: dle rozpočtu</li>
+                                        <li>Stavební náklady: dle tendru</li>
+                                    </ul>
+                                </div>
+                                <div class="resource-group">
+                                    <em>Materiální zdroje:</em>
+                                    <ul>
+                                        <li>Kancelářské zázemí</li>
+                                        <li>SW nástroje (PM, BIM)</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>
+                                <strong>ČASOVÝ RÁMEC</strong>
+                                <div class="timeline-item">
+                                    <span class="phase">A1: Přípravná fáze</span>
+                                    <span class="duration">2 měsíce</span>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="phase">A2: Projektová příprava</span>
+                                    <span class="duration">6–12 měsíců</span>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="phase">A3: Realizace stavby</span>
+                                    <span class="duration">18–24 měsíců</span>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="phase">A4: Komercializace</span>
+                                    <span class="duration">3–12 měsíců po kolaudaci</span>
+                                </div>
+                                <div class="timeline-item total">
+                                    <span class="phase"><strong>CELKEM</strong></span>
+                                    <span class="duration"><strong>cca 36–48 měsíců</strong></span>
+                                </div>
+                            </td>
+                            <td class="assumptions">
+                                <strong>VSTUPNÍ PŘEDPOKLADY</strong>
+                                <p>(pro zahájení projektu)</p>
+                                <ul>
+                                    <li>Vyřešené majetkoprávní vztahy k pozemkům</li>
+                                    <li>Soulad záměru s územním plánem</li>
+                                    <li>Schválení projektu vedením firmy</li>
+                                    <li>Disponibilní kapitál pro zahájení</li>
+                                    <li>Sestavený projektový tým</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
